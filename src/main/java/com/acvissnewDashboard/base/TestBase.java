@@ -3,10 +3,12 @@ package com.acvissnewDashboard.base;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
@@ -18,7 +20,7 @@ public class TestBase {
     public TestBase() {
         try {
             prop = new Properties();
-            FileInputStream ip = new FileInputStream("D:\\eclipse\\AcvissNewDashboard\\src\\test\\resources\\config.properties");
+            FileInputStream ip = new FileInputStream("C:\\Users\\Nirupama Nayak\\NewAcvissDashboard\\src\\test\\resources\\config.properties");
             prop.load(ip);
         } catch (IOException e) {
             e.printStackTrace();
@@ -37,5 +39,19 @@ public class TestBase {
             driver.get(prop.getProperty("url"));
         }
     }
+    
+    
+    
+	public static void dynamicDropDown(List<WebElement> ele, String option) {
+		for (WebElement e : ele) {
+			String text = e.getText();
+			if (text.equals(option)) {
+				e.click();
+				break;
+			}
+		}
+
+	}
+	
       
 }
