@@ -38,6 +38,7 @@ public class LoginPageTest extends TestBase {
         Assert.assertTrue(flag);
         System.out.println("Image is there: " + flag);
     }
+<<<<<<< HEAD
     
 	@Test(priority = 3)
 	public void logintest() throws InterruptedException, IOException {
@@ -46,6 +47,9 @@ public class LoginPageTest extends TestBase {
 		Assert.assertEquals("ATN-Certify",title );
 	}
 
+=======
+//updated by Nirupama
+>>>>>>> 84e9ef8525b228c71d874d7a1f88457ed5d479b1
    @Test(priority = 4)
     public void emptyValidationForUsernameTest() {
         String emptyMessage = loginPage.emptyUsername();
