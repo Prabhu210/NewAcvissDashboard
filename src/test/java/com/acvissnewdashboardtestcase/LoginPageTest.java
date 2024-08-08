@@ -1,5 +1,6 @@
 package com.acvissnewdashboardtestcase;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import org.testng.Assert;
@@ -31,12 +32,19 @@ public class LoginPageTest extends TestBase {
     }
 
     @Test(priority = 2)
-    public void acvissLogoTest() {
-    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+    public void acvissLogoTest() throws InterruptedException  {
+    	Thread.sleep(3000);
         boolean flag = loginPage.validateAcvissImage();
         Assert.assertTrue(flag);
         System.out.println("Image is there: " + flag);
     }
+    
+	@Test(priority = 3)
+	public void logintest() throws InterruptedException, IOException {
+		loginPage.login(prop.getProperty("username"), prop.getProperty("password"));	
+		String title= driver.getTitle();
+		Assert.assertEquals("ATN-Certify",title );
+	}
 
    @Test(priority = 4)
     public void emptyValidationForUsernameTest() {

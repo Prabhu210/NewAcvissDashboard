@@ -37,6 +37,14 @@ public class LoginPage extends TestBase {
     public boolean validateAcvissImage() {
         return acviss_logo.isDisplayed();
     }
+    
+    public Homepage login(String UN , String PW) throws InterruptedException{
+		username.sendKeys(UN);
+		password.sendKeys(PW);
+		login_button.click();
+		
+		return new  Homepage();
+	}
 
     public String emptyUsername() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));

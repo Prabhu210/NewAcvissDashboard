@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.acvissnewdashboardtestcase.LoginPageTest">
+      <class name="com.acvissnewdashboardtestcase.HomePageTestcases">
         <methods>
+          <include name="verifyCustomerManagementTest"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="acvissLogoTest"/>
         </methods>
-      </class> <!-- com.acvissnewdashboardtestcase.LoginPageTest -->
+      </class> <!-- com.acvissnewdashboardtestcase.HomePageTestcases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
