@@ -37,7 +37,7 @@ public class LoginPageTest extends TestBase {
         Assert.assertTrue(flag);
         System.out.println("Image is there: " + flag);
     }
-
+//updated by Nirupama
    @Test(priority = 4)
     public void emptyValidationForUsernameTest() {
         String emptyMessage = loginPage.emptyUsername();
