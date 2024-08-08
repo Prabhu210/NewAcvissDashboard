@@ -3,11 +3,32 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="com.acvissnewdashboardtestcase.LoginPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="emptyValidationForPasswordTest"/>
+          <include name="incorrectUsernameAndPasswordTest"/>
+          <include name="emptyValidationForUsernameTest"/>
+          <include name="logintest"/>
+          <include name="tearDown"/>
+          <include name="loginPageTitleTest"/>
+          <include name="acvissLogoTest"/>
+        </methods>
+      </class> <!-- com.acvissnewdashboardtestcase.LoginPageTest -->
       <class name="com.acvissnewdashboardtestcase.HomePageTestcases">
         <methods>
           <include name="verifyCustomerManagementTest"/>
           <include name="setUp"/>
+          <include name="verifyAcvissLogo"/>
+          <include name="verifyVariableData"/>
+          <include name="homePageTitleTest"/>
           <include name="tearDown"/>
+          <include name="userDetails"/>
+          <include name="verifyProductManagement"/>
+          <include name="verifyLicenceManagement"/>
+          <include name="verifyLoyaltySystem"/>
+          <include name="verifyUserManagement"/>
+          <include name="verifyCodeManagementTest"/>
         </methods>
       </class> <!-- com.acvissnewdashboardtestcase.HomePageTestcases -->
     </classes>
